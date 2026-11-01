@@ -1,4 +1,4 @@
-# Young Agripreneurs Lesson Recorder
+# Young Agripreneurs Lesson Recorder 
 
 A local-first classroom recorder with slide, screen, camera, annotation, question-paper, memo and animated-whiteboard workflows.
 
