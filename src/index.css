@@ -1,0 +1,124 @@
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/geist-sans/700.css';
+@import '@fontsource/geist-mono/400.css';
+@import '@fontsource/geist-mono/500.css';
+@import '@fontsource/geist-mono/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper-50: oklch(0.985 0.006 85);
+    --paper-100: oklch(0.965 0.009 80);
+    --ink-900: oklch(0.18 0.01 80);
+    --ink-700: oklch(0.34 0.012 80);
+    --ink-500: oklch(0.5 0.012 80);
+    --terracotta-600: oklch(0.52 0.17 32);
+    --terracotta-500: oklch(0.58 0.16 32);
+    --terracotta-100: oklch(0.94 0.04 38);
+    --forest-950: oklch(0.19 0.018 155);
+    --forest-900: oklch(0.23 0.018 155);
+    --success-600: oklch(0.52 0.11 155);
+    --warning-600: oklch(0.57 0.14 65);
+
+    --background: var(--paper-50);
+    --foreground: var(--ink-900);
+    --card: var(--paper-50);
+    --card-foreground: var(--ink-900);
+    --popover: var(--paper-50);
+    --popover-foreground: var(--ink-900);
+    --primary: var(--forest-950);
+    --primary-foreground: var(--paper-50);
+    --secondary: var(--paper-100);
+    --secondary-foreground: var(--ink-900);
+    --muted: var(--paper-100);
+    --muted-foreground: var(--ink-500);
+    --accent: var(--terracotta-100);
+    --accent-foreground: var(--terracotta-600);
+    --destructive: var(--terracotta-600);
+    --destructive-foreground: var(--paper-50);
+    --border: oklch(0.88 0.012 80);
+    --input: oklch(0.88 0.012 80);
+    --ring: var(--terracotta-500);
+    --radius: 0.625rem;
+
+    --surface-page: var(--paper-50);
+    --surface-raised: oklch(0.995 0.004 85);
+    --surface-dark: var(--forest-950);
+    --text-primary: var(--ink-900);
+    --text-secondary: var(--ink-500);
+    --action-accent: var(--terracotta-500);
+    --action-accent-hover: var(--terracotta-600);
+  }
+
+  * {
+    box-sizing: border-box;
+    border-color: var(--border);
+  }
+
+  html,
+  body,
+  #root {
+    min-width: 0;
+    min-height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: var(--surface-page);
+    color: var(--text-primary);
+    font-family: 'Geist Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  select,
+  input {
+    font: inherit;
+  }
+
+  button,
+  a,
+  select,
+  input[type='range'] {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  select:focus-visible,
+  input:focus-visible,
+  canvas:focus-visible {
+    outline: 2px solid var(--action-accent);
+    outline-offset: 3px;
+  }
+
+  button:disabled,
+  select:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+
+  ::selection {
+    background: var(--terracotta-100);
+    color: var(--ink-900);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
